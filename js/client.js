@@ -91,6 +91,9 @@
     function paintLoop(timestamp){
         canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
         var delta = (window.requestAnimationFrame ? timestamp - lastPaintTime : ms) / 1000;
+        if(delta > 0.05){
+            delta = 0.05;
+        }
         drawStars(delta);
         (window.requestAnimationFrame && requestAnimationFrame(paintLoop)) || setTimeout(paintLoop, ms);
         lastPaintTime = timestamp;
