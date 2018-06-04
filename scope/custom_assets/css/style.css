@@ -32,5 +32,13 @@ img.img-company {
 }
 
 .card[data-color="silver"] {
-    background: #c5c5c5;
+    background: #9c9c9c;
+}
+
+.card[data-color="dark_purple"] {
+    background: rgb(103,52,209);
+}
+
+.card[data-color="gold"] {
+    background: #fac03c;
 }
