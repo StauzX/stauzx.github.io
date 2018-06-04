@@ -24,11 +24,12 @@ img.img-logo-red {
 
 img.img-company {
     height: 100px;
+    max-width: 100%;
     margin: 20px 0;
 }
 
 .card-pricing .card-body {
-    height: 360px;
+    min-height: 441px;
 }
 
 .card[data-color="silver"] {
