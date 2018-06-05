@@ -29,6 +29,10 @@ var navbarHeight = 0;
 $(document).ready(function(){
     window_width = $(window).width();
 
+    // auto close menu on tap (mobile)
+    $('a.nav-link').click(function(evt){
+        $('.nav-open .navbar-toggler').click();
+    });
 
     //  Activate the tooltips
     $('[data-toggle="tooltip"]').tooltip();
@@ -69,7 +73,8 @@ $(document).ready(function(){
         big_image = $('.page-header[data-parallax="true"]');
 
         if(big_image.length != 0){
-           $(window).on('scroll', pk.checkScrollForPresentationPage);
+            pk.checkScrollForPresentationPage();
+            $(window).on('scroll', pk.checkScrollForPresentationPage);
         }
     }
 
@@ -106,6 +111,7 @@ $(document).ready(function(){
 
     // Navbar color change on scroll
     if($('.navbar[color-on-scroll]').length != 0){
+        pk.checkScrollForTransparentNavbar();
         $(window).on('scroll', pk.checkScrollForTransparentNavbar)
     }
 
@@ -132,10 +138,11 @@ $(document).ready(function(){
     // Init video header
     pk.initVideoBackground();
 
+    // don't need navbar animation anymore
     // Activate Navbar
-    if($('.nav-down').length != 0){
+    /*if($('.nav-down').length != 0){
         pk.checkScrollForMovingNavbar();
-    };
+    };*/
 
 });
 

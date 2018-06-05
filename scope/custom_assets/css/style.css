@@ -28,18 +28,6 @@ img.img-company {
     margin: 20px 0;
 }
 
-.card-pricing .card-body {
-    min-height: 441px;
-}
-
-.card[data-color="silver"] {
-    background: #9c9c9c;
-}
-
-.card[data-color="dark_purple"] {
-    background: rgb(103,52,209);
-}
-
-.card[data-color="gold"] {
-    background: #fac03c;
+.contact-form label {
+    color: black;
 }
